@@ -1,0 +1,43 @@
+let attempt = 3;
+function genratenum() {
+    let numbercpu = Math.floor(Math.random() * 30);
+    return numbercpu;
+    
+}
+
+
+// declear getnum
+let genenum = genratenum();
+// give 3 num to help user 
+let help1 = genenum + 4;
+let help2 = genenum + 8;
+let help3 = genenum + 16;
+let help4 = genenum + 32;
+console.log('این اعداد به تو برای حل مسئله کمک میکنن ')
+console.log('??', help1, help2, help3, help4)
+console.log(' 3 تا شانس داری ')
+
+
+
+while (attempt > 0) {
+    
+   
+
+    // get number from user 
+    let usernum = parseInt(prompt('عدد مورد نظر را بنویس !'))
+
+    // calculate number
+    if (usernum === genenum) {
+        console.log('آفرین بردی ! ')
+        break;
+    }
+    else {
+        console.log (  'این عدد نبود  دوباره امتحان کن ' + usernum )
+        console.log(' شانس ' + attempt)
+        attempt--
+        if (attempt === 0) {
+            alert("باختی ");
+        }
+        
+    }
+}
